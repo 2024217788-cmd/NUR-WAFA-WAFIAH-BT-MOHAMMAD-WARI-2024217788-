@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Friends - Nur Wafa</title>
+<meta charset="UTF-8">
+<meta name="author" content="Wafa">
+<meta name="description" content="Personal website of Wafa">
+<meta name="keywords" content="Wafa, personal website, literature">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="banner h1">
+<h1>&#128109; My Best Friends</h1>
+</div>
+
+<div class="navbar">
+<a href="index.html">&#127969; Home</a>
+<a href="about.html">&#129493; Myself</a>
+<a href="family.html">&#128106; Family</a>
+<a href="movie.html">&#127916; Movie</a>
+<a href="gallery.html">&#128248; Gallery</a>
+<a href="contact.html">&#128229; Contact</a>
+</div>
+
+<br>
+
+<div class="hero-section">
+<h1>My Ride or Die</h1>
+<p>&#127769; Friends who became family &#127769;</p>
+</div>
+
+<div class="friend-container">
+<div class="flex-container">
+
+<div class="dropdown-container">
+<button class="dropdown-btn" onclick="toggleDropdown('friendDropdown')">HERE!!!</button>
+<div class="dropdown-content" id="friendDropdown">
+<div class="dropdown-item" onclick="showSection('friendslist')">&#128109; My Besties</div>
+<div class="dropdown-item" onclick="showSection('activities')">&#127909; Activities</div>
+<div class="dropdown-item" onclick="showSection('message')">&#127776; Quick Message</div>
+</div>
+</div>
+
+<div class="dynamic-content" id="contentArea"></div>
+
+</div>
+</div>
+
+<br>
+
+<div class="disclaimer">
+<p>&#169; 2026 Wafa | All Rights Reserved</p>
+<p>Recommended Browser: Google Chrome, Mozilla Firefox</p>
+<p>Last Update: May 2026 | <a href="friend.html">&#11014; Back to Top</a></p>
+</div>
+
+<script>
+const contentSections = {
+
+friendslist: `
+<h2>&#128109; My 3 Besties</h2>
+<div class="info-card">
+
+<div class="clean-list">
+<p><b>Piyut</b><br>
+I met Piyut during my first year of diploma. We always sat next to each other 
+in class. What makes her special is that she always listens without judgment. 
+I can tell her anything (my problems, my worries, even my silly thoughts) 
+and she never makes me feel embarrassed. She is like a diary that talks back and 
+gives the best advice. I don't know what I would do without her calming 
+presence in my life.</p>
+
+<br><hr><br>
+
+<p><b>Oneng</b><br>
+Oneng and I met through Piyut. They are originally roommate. As I always hangging 
+with Piyut, we suddenly became close. She is the sunshine of our group. Whenever I 
+feel sad or stressed, she knows exactly how to make us laugh. Her energy is 
+contagious, and she always pushes us to try new things. Whether it's dragging 
+us to a new cafe or convincing us to go hiking, she makes every gloomy day feel 
+alive. Life with Oneng is never boring!</p>
+
+<br><hr><br>
+
+<p><b>Avantiz</b><br>
+I got to know Avantiz when I became her roommate in semester 3. At first, I thought 
+she was quiet and serious, but once you get to know her, she is actually the craziest 
+among us! She is the one who reminds us not to take life too seriously and to enjoy 
+the little moments. Her silly thoughts, random jokes, and unexpected moves always 
+catch us off guard in the best way possible.</p>
+
+<br><hr><br>
+
+<p class="card-note" style="text-align:center;">&#10084; 3 friends, 3 different personalities, 1 beautiful friendship.&#10084;</p>
+</div>
+</div>
+`,
+
+activities: `
+<h2>&#127909; Our Favorite Activities Together</h2>
+<div class="info-card">
+<ul class="clean-list">
+<li><b>Food Hunting:</b> Always looking for the best cheap eats</li>
+<li><b>Go Out Together:</b> We always go out every weekend to find a mood and collect energy (whether it's far or near the house)</li>
+<li><b>Take Photos:</b> We help each other take ourselves pictures</li>
+<li><b>Shopping:</b> Once in a month we will go to the grocery store to buy food stock or any appliance</li>
+<li><b>Random Vlogging:</b> Take videos to create more memories in our gallery</li>
+</ul>
+</div>
+`,
+
+message: `
+<h2>&#127776; My Message to Them</h2>
+<div class="info-card">
+<div class="card-container">
+
+<p class="letter-text">
+To my 3 favorite people in the world,<br><br>
+
+Piyut, thank you for always listening to my problems without judgment. 
+Oneng, thank you for making every gloomy day feels alive.
+Avantiz, thank you for being a crazy person with mentally stable.<br><br>
+
+Thank you for accepting me for who I am (the good, the bad, and the messy).
+Thank you for the late-night talks, the uncontrollable laughter, and
+for wiping my tears when things get hard. Life is unpredictable,
+but I'm grateful that I have you all by my side.<br><br>
+
+You have been my comfort during difficult days and my biggest source of happiness
+during the good ones. With all of you, I never have to pretend to be someone I'm not.
+You guys make ordinary moments feel special, and some of my favorite memories
+exist because of the time we've spent together.<br><br>
+
+I pray we stay friends until we're old and gray, still laughing at the same stupid jokes.
+No matter where life takes us, I hope we always find our way back to each other.
+Thank you for being my safe place, my support system,
+and a reminder that true friendship really exists.<br><br>
+
+I love you all. Forever and always.</p>
+<p class="card-author">~ Imuttt ;]</p>
+
+<br><hr><br>
+
+<p style="text-align:center;">Thank you so much for being my friends and willing to get 
+through this years with me. I really hope that we will always be like this until all of us die.</p>
+
+<br><hr><br>
+
+<p style="text-align:center;"><i>"Love has its magic, but friendship has its madness."</i></p>
+
+</div>
+</div>
+`
+};
+
+function toggleDropdown(dropdownId) {
+var dropdown = document.getElementById(dropdownId);
+if (dropdown.classList.contains('show')) {
+dropdown.classList.remove('show');
+} else {
+dropdown.classList.add('show');
+}
+}
+
+function showSection(section) {
+document.getElementById('contentArea').innerHTML = contentSections[section];
+}
+
+document.addEventListener('click', function(event) {
+var isClickInside = event.target.closest('.dropdown-container');
+if (!isClickInside) {
+var allDropdowns = document.querySelectorAll('.dropdown-content');
+allDropdowns.forEach(function(dropdown) {
+dropdown.classList.remove('show');
+});
+}
+});
+
+showSection(' ');
+</script>
+
+</body>
+</html>
