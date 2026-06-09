@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>About Me - Nur Wafa</title>
+<meta charset="UTF-8">
+<meta name="author" content="Wafa">
+<meta name="description" content="Personal website of Wafa">
+<meta name="keywords" content="Wafa, personal website, literature">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="banner h1">
+<h1>&#129493; About Me</h1>
+</div>
+
+<div class="navbar">
+<a href="home.html">&#127969; Home</a>
+<a href="family.html">&#128106; Family</a>
+<a href="friend.html">&#128109; Friends</a>
+<a href="movie.html">&#127916; Movie</a>
+<a href="gallery.html">&#128248; Gallery</a>
+<a href="contact.html">&#128229; Contact</a>
+</div>
+
+<br>
+
+<div class="hero-section">
+<h1>Get to Know Me!</h1>
+<p>&#127769; <i>Student | Movie Dreamer | Foodie</i> &#127769;</p>
+</div>
+
+<div class="about-container">
+<div class="flex-container">
+
+<div class="dropdown-container">
+<button class="dropdown-btn" onclick="toggleDropdown('aboutDropdown')">HERE!!!</button>
+<div class="dropdown-content" id="aboutDropdown">
+<div class="dropdown-item" onclick="showSection('personal')">&#128203; Personal Details</div>
+<div class="dropdown-item" onclick="showSection('music')">&#127925; Musics</div>
+<div class="dropdown-item" onclick="showSection('quote')">&#128172; Quote</div>
+</div>
+</div>
+
+<div class="dynamic-content" id="contentArea"></div>
+
+</div>
+</div>
+
+<br>
+
+<div class="disclaimer">
+<p>&#169; 2026 Wafa | All Rights Reserved</p>
+<p>Recommended Browser: Google Chrome, Mozilla Firefox</p>
+<p>Last Update: May 2026 | <a href="about.html">&#11014; Back to Top</a></p>
+</div>
+
+<script>
+const contentSections = {
+
+personal: `
+<h2>&#128203; My Personal Details</h2>
+<div class="info-card">
+
+<div>
+<h3><center>Nur Wafa Wafiah bt Mohd Wari</center></h3>
+<p><i><center>Diploma in Library Informatics, UiTM Cawangan Kedah</center></i></p>
+<p><center>&#128222; +601123456789 | &#127968; Tanjong Malim, Perak</center></p>
+
+<br>
+
+<h3>&#128161; Short Story About Me...</h3>
+<p>I have been in love with Malay literature since I was 12 years old. 
+It all started with my older cousin, who introduced me to the beauty of 
+words and stories. Since then, I have spent countless hours reading poems, 
+collecting meaningful quotes, and exploring different literary works. When 
+I entered secondary school, choosing Literature as a subject felt like a 
+natural decision because it was something I genuinely enjoyed. Literature 
+has shaped the way I think, feel, and express myself. Through every poem and 
+story, I discovered new perspectives, deeper emotions, and a greater appreciation 
+for the power of language. To me, literature is not just a field of study, but 
+a part of who I am.</p>
+
+<br><hr><br>
+
+<h3>&#129531; Skills</h3>
+<ul>
+<li><b>Technical:</b> Basic HTML code, Basic Python, Microsoft Office, Basic Adobe</li>
+<li><b>Soft Skills:</b> Good communication, Confidence, Good teamwork</li>
+<li><b>Language:</b> Bahasa Melayu (fluent), English (Good)</li>
+</ul>
+
+<br><hr><br>
+
+<h3>&#127979; Education</h3>
+<table class="info-table" style="width:100%;">
+
+<tr>
+<th>Year</th>
+<th>Instituation</th>
+<th>Course</th>
+</tr>
+
+<tr>
+<td>2024 - Now</td>
+<td>UiTM Cawangan Kedah</td>
+<td>Diploma in Library Informatics</td>
+</tr>
+
+<tr>
+<td>2018 - 2022</td>
+<td>SMK Khir Johari, Tanjong Malim</td>
+<td>Literature Subject</td>
+</tr>
+
+<tr>
+<td>2012 - 2017</td>
+<td>SK Datuk Nan Kaya, Tanjong Malim</td>
+<td>School Subject</td>
+</tr>
+
+</table>
+
+<br><hr><br>
+
+<h3>&#128188; Experiences & Activities</h3>
+<ol>
+<li>Volunteer in Persatuan Bulan Sabit Merah for 1 year</li>
+<li>Active in sports for 3 years</li>
+<li>Part-time in kitchen work in a month</li>
+</ol>
+
+<br><hr><br>
+
+<h3>&#128203; Personal Details</h3>
+<table class="info-table" style="width:100%;">
+
+<tr>
+<th>Birth Date</th>
+<td>26 August 2005</td>
+<th>Gender</th>
+<td>Woman</td>
+</tr>
+
+<tr>
+<th>Status</th>
+<td>Single</td>
+<th>Religion</th>
+<td>Islam</td>
+</tr>
+
+<tr>
+<th>Hobby</th>
+<td colspan="3">Watching movies, Read webtoon, Editing videos</td>
+</tr>
+
+</table>
+
+</div>
+`,
+
+music: `
+<h2>&#127925; My Fav Music</h2>
+<div class="info-card">
+<div class="audio-container">
+<audio controls>
+<source src="rindusong.mp3" type="audio/mpeg">
+</audio>
+<p class="audio-caption">&#10077; Distance teaches the heart how to ache quietly. &#10078;</p>
+<p><i><a href="https://youtu.be/bACzpikbSMs?si=2CeStyL2vQwUYhi_" target="_blank">"Rindu Tak Terucap" - Fiq7</a></i></p>
+</div>
+
+<br><hr><br>
+
+<div class="audio-container">
+<audio controls>
+<source src="mercysong.mp3" type="audio/mpeg">
+</audio>
+<p class="audio-caption">&#10077; The deepest wounds are left by the hands we trust the most. &#10078;</p>
+<p><i><a href="https://youtu.be/TZhuCTXjGHY?si=MQ5-_j4r_E3KJuHZ" target="_blank">"Mercy" - Shawn Mendes</a></i></p>
+</div>
+</div>
+`,
+
+quote: `
+<h2>&#128172; My Fav Quote</h2>
+<div class="info-card">
+<div class="quote-container">
+<p class="quote-text">&#10077; Feelings are much like waves. We can't stop them from coming,<br>
+but we can choose which one to surf. &#10078;</p>
+<p class="quote-author">~ Jonatan Martensson</p>
+<br><hr><br>
+<p class="quote-text">&#10077; Stop expecting too much. Peace feels safer that way :) &#10078;</p>
+<p class="quote-reflection"><i>don't put high expectation on anything</i></p>
+</div>
+</div>
+`,
+};
+
+function toggleDropdown(dropdownId) {
+var dropdown = document.getElementById(dropdownId);
+if (dropdown.classList.contains('show')) {
+dropdown.classList.remove('show');
+} else {
+dropdown.classList.add('show');
+}
+}
+
+function showSection(section) {
+document.getElementById('contentArea').innerHTML = contentSections[section];
+}
+
+document.addEventListener('click', function(event) {
+var isClickInside = event.target.closest('.dropdown-container');
+if (!isClickInside) {
+var allDropdowns = document.querySelectorAll('.dropdown-content');
+allDropdowns.forEach(function(dropdown) {
+dropdown.classList.remove('show');
+});
+}
+});
+
+showSection(' ');
+</script>
+
+</body>
+</html>

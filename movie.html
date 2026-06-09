@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Movie List - Nur Wafa</title>
+<meta charset="UTF-8">
+<meta name="author" content="Wafa">
+<meta name="description" content="Personal website of Wafa - my favorite movie list">
+<meta name="keywords" content="Wafa, movies, One Piece, Jujutsu Kaisen, Wednesday">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="banner h1">
+<h1>&#127916; Movie List</h1>
+</div>
+
+<div class="navbar">
+<a href="home.html">&#127969; Home</a>
+<a href="about.html">&#129493; Myself</a>
+<a href="family.html">&#128106; Family</a>
+<a href="friend.html">&#128109; Friends</a>
+<a href="gallery.html">&#128248; Gallery</a>
+<a href="contact.html">&#128229; Contact</a>
+</div>
+
+<br>
+
+<div class="hero-section">
+<h1>Movies That Shape My Soul</h1>
+<p>&#127769; From anime to horror, from action to drama - these are my favorites! &#127769;</p>
+</div>
+
+<div class="movie-container">
+<div class="flex-container">
+
+<div class="dropdown-container">
+<button class="dropdown-btn" onclick="toggleDropdown('movieDropdown')">HERE!!!</button>
+<div class="dropdown-content" id="movieDropdown">
+<div class="dropdown-item" onclick="showSection('anime')">&#128214; Anime</div>
+<div class="dropdown-item" onclick="showSection('action')">&#9876; Action</div>
+<div class="dropdown-item" onclick="showSection('horror')">&#128328; Horror/Thriller</div>
+<div class="dropdown-item" onclick="showSection('drama')">&#128150; Drama/Mystery</div>
+</div>
+</div>
+
+<div class="dynamic-content" id="contentArea"></div>
+
+</div>
+</div>
+
+<br>
+
+<div class="disclaimer">
+<p>&#169; 2026 Wafa | All Rights Reserved</p>
+<p>Recommended Browser: Google Chrome, Mozilla Firefox</p>
+<p>Last Update: June 2026 | <a href="movie.html">&#11014; Back to Top</a></p>
+</div>
+
+<script>
+const contentSections = {
+
+anime: `
+<h2>&#128214; My Anime Collection</h2>
+<div class="info-card clean-list">
+
+<div class="movie-card">
+<div class="movie-title"><span>&#127916;</span> One Piece</div>
+<div class="movie-genre">&#128214; Anime | Action | Adventure | Fantasy</div>
+<p><b>Summary:</b> Monkey D. Luffy dreams of becoming the Pirate King by finding 
+the legendary treasure One Piece. Along with his diverse crew, he sails the Grand 
+Line facing powerful enemies and making lifelong friends.</p>
+<p>&#128293; My rating: &#9733;&#9733;&#9733;&#9733;&#9733;</p>
+</div>
+
+<div class="movie-card">
+<div class="movie-title"><span>&#128169;</span> Jujutsu Kaisen</div>
+<div class="movie-genre">&#128214; Anime | Action | Supernatural | Dark Fantasy</div>
+<p><b>Summary:</b> Yuji Itadori swallows a cursed finger and becomes the host of the 
+powerful demon Ryomen Sukuna. He joins Jujutsu High to train as a sorcerer and fight 
+against dangerous curses.</p>
+<p>&#128293; My rating: &#9733;&#9733;&#9733;&#9733;&#9733;</p>
+</div>
+`,
+
+action: `
+<h2>&#9876; My Action Movies</h2>
+<div class="info-card clean-list">
+
+<div class="movie-card">
+<div class="movie-title"><span>&#128295;</span> Mat Kilau</div>
+<div class="movie-genre">&#127909; Movie | Action | History | Patriotism</div>
+<p><b>Summary:</b> A Malaysian warrior fights against British colonial forces in 
+Pahang. This epic film showcases bravery, sacrifice, and the fight for independence.</p>
+<p>&#128293; My rating: &#9733;&#9733;&#9733;&#9733;&#9733;</p>
+</div>
+
+<div class="movie-card">
+<div class="movie-title"><span>&#128375;</span> Spiderman</div>
+<div class="movie-genre">&#127909; Movie | Action | Superhero</div>
+<p><b>Summary:</b> Peter Parker gains spider-like abilities and learns that with great 
+power comes great responsibility while fighting villains in New York City.</p>
+<p>&#128293; My rating: &#9733;&#9733;&#9733;&#9733;</p>
+</div>
+
+<div class="movie-card">
+<div class="movie-title"><span>&#128663;</span> Transformers</div>
+<div class="movie-genre">&#127909; Movie | Action | Sci-Fi | Robot</div>
+<p><b>Summary:</b> Autobots and Decepticons bring their war to Earth. A young man 
+gets caught in the middle of an epic battle for the planet's fate.</p>
+<p>&#128293; My rating: &#9733;&#9733;&#9733;&#9733;</p>
+</div>
+
+<div class="movie-card">
+<div class="movie-title"><span>&#128481;</span> Salaar</div>
+<div class="movie-genre">&#127909; Movie | Action | Thriller | Indian</div>
+<p><b>Summary:</b> A deadly warrior from a tribal region rises to become a 
+powerful force. Friendships are tested in a brutal war for power.</p>
+<p>&#128293; My rating: &#9733;&#9733;&#9733;&#9733;&#9733;</p>
+</div>
+
+</div>
+`,
+
+horror: `
+<h2>&#128328; My Horror & Thriller Movies</h2>
+<div class="info-card clean-list">
+
+<div class="movie-card">
+<div class="movie-title"><span>&#128031;</span> Under Paris</div>
+<div class="movie-genre">&#127909; Movie | Horror | Thriller</div>
+<p><b>Summary:</b> A giant shark terrorizes Paris during an international 
+triathlon. A scientist must stop the deadly creature before mass destruction.</p>
+<p>&#128293; My rating: &#9733;&#9733;&#9733;&#9733;&#9733;</p>
+</div>
+
+<div class="movie-card">
+<div class="movie-title"><span>&#127979;</span> School Tales The Series</div>
+<div class="movie-genre">&#128249; Series | Horror | Thai Drama</div>
+<p><b>Summary:</b> A Thai horror anthology with terrifying ghost stories set in 
+schools. Each episode features different supernatural entities.</p>
+<p>&#128293; My rating: &#9733;&#9733;&#9733;&#9733;</p>
+</div>
+
+<div class="movie-card">
+<div class="movie-title"><span>&#128328;</span> The 8th Night</div>
+<div class="movie-genre">&#127909; Movie | Horror | Thriller | Korean</div>
+<p><b>Summary:</b> After 2,500 years, an ancient evil awakens on the 8th night. 
+A monk, detective, and shaman must stop it from destroying humanity.</p>
+<p>&#128293; My rating: &#9733;&#9733;&#9733;&#9733;&#9733;</p>
+</div>
+
+<div class="movie-card">
+<div class="movie-title"><span>&#127875;</span> The Cursed of Bridge Hollow</div>
+<div class="movie-genre">&#127909; Movie | Horror | Comedy | Halloween</div>
+<p><b>Summary:</b> Halloween decorations come to life after an ancient curse is 
+activated. A father and daughter team up to save their town.</p>
+<p>&#128293; My rating: &#9733;&#9733;&#9733;</p>
+</div>
+
+</div>
+`,
+
+drama: `
+<h2>&#128150; My Drama & Mystery Movies</h2>
+<div class="info-card clean-list">
+
+<div class="movie-card">
+<div class="movie-title"><span>&#128058;</span> Wednesday</div>
+<div class="movie-genre">&#128249; Series | Mystery | Comedy | Supernatural</div>
+<p><b>Summary:</b> Wednesday Addams attends Nevermore Academy, masters her psychic 
+powers, stops a killing spree, and solves a 25-year-old mystery.</p>
+<p>&#128293; My rating: &#9733;&#9733;&#9733;&#9733;</p>
+</div>
+
+<div class="movie-card">
+<div class="movie-title"><span>&#128166;</span> Telaga Suriram</div>
+<div class="movie-genre">&#127909; Movie | Drama | Mystery | Malay Folklore</div>
+<p><b>Summary:</b> A mysterious story about a sacred well in a Malay village, 
+exploring local folklore, secrets, and supernatural elements.</p>
+<p>&#128293; My rating: &#9733;&#9733;&#9733;&#9733;&#9733;</p>
+</div>
+
+<div class="movie-card">
+<div class="movie-title"><span>&#128106;</span> Family</div>
+<div class="movie-genre">&#127909; Movie | Drama | Action | Crime</div>
+<p><b>Summary:</b> A story about loyalty, betrayal, 
+and the meaning of family. Blood makes you related, but loyalty makes you family.</p>
+<p>&#128293; My rating: &#9733;&#9733;&#9733;&#9733;;</p>
+</div>
+
+</div>
+`
+
+};
+
+function toggleDropdown(dropdownId) {
+var dropdown = document.getElementById(dropdownId);
+if (dropdown.classList.contains('show')) {
+dropdown.classList.remove('show');
+} else {
+dropdown.classList.add('show');
+}
+}
+
+function showSection(section) {
+document.getElementById('contentArea').innerHTML = contentSections[section];
+}
+
+document.addEventListener('click', function(event) {
+var isClickInside = event.target.closest('.dropdown-container');
+if (!isClickInside) {
+var allDropdowns = document.querySelectorAll('.dropdown-content');
+allDropdowns.forEach(function(dropdown) {
+dropdown.classList.remove('show');
+});
+}
+});
+
+showSection(' ');
+</script>
+
+</body>
+</html>
